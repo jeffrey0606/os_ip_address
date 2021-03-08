@@ -1,5 +1,5 @@
 #include "include/os_ip_address/os_ip_address_plugin.h"
-#include "include/netif/gmlc/netif/NetIF.hpp"
+#include "../windows/include/netif/gmlc/netif/NetIF.hpp"
 
 #include <flutter_linux/flutter_linux.h>
 #include <gtk/gtk.h>
