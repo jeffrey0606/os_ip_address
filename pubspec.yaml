@@ -1,7 +1,7 @@
 name: os_ip_address
 description: A Plugin to get your pc ip address
-version: 1.1.1
-author: Jeffrey Kengne
+version: 1.1.2
+repository: https://github.com/jeffrey0606/os_ip_address/tree/master
 homepage:
 
 environment:
