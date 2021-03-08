@@ -2,6 +2,8 @@
 //  Generated file. Do not edit.
 //
 
+// clang-format off
+
 #include "generated_plugin_registrant.h"
 
 #include <os_ip_address/os_ip_address_plugin.h>

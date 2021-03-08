@@ -45,10 +45,18 @@ static void os_ip_address_plugin_handle_method_call(
   else if (strcmp(method, "getIpAddress") == 0)
   {
     auto addrs_ipv4 = gmlc::netif::getInterfaceAddressesV4();
-    auto ip = addrs_ipv4[addrs_ipv4.size() - 1];
-    const char * ip_ptr = ip.c_str();
+    //auto ip = addrs_ipv4[addrs_ipv4.size() - 1];
+    //const char * ip_ptr = ip.c_str();
+    std::string ip_ptr = "";
+    auto ips = "";
+    for (auto ip = addrs_ipv4.begin(); ip != addrs_ipv4.end(); ++ip) {
+      ip_ptr.append(* ip).append("-");
+    }
+    ip_ptr.pop_back();
+
+    ips = ip_ptr.c_str();
     
-    g_autoptr(FlValue) result = fl_value_new_string(ip_ptr);
+    g_autoptr(FlValue) result = fl_value_new_string(ips);
     response = FL_METHOD_RESPONSE(fl_method_success_response_new(result));
   }
   else

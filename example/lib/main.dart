@@ -48,14 +48,10 @@ class _MyAppState extends State<MyApp> {
     String ipAddress;
     try {
       final temp = await OsIpAddress.ipAddress;
+      print(temp);
       temp.removeWhere((ip) => ip == "127.0.0.1" || ip == "0.0.0.0");
-      if(temp.length > 1) {
-        ipAddress = temp[1];
-      } else {
-        ipAddress = temp[0];
-      }
-      
-    } on PlatformException{
+      ipAddress = temp[0];
+    } on PlatformException {
       ipAddress = "failed to get ip address";
     }
 
