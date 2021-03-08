@@ -1,6 +1,6 @@
 name: os_ip_address
 description: A Plugin to get your pc ip address
-version: 0.0.1
+version: 1.1.1
 author: Jeffrey Kengne
 homepage:
 
@@ -28,6 +28,8 @@ flutter:
   plugin:
     platforms:
       linux:
+        pluginClass: OsIpAddressPlugin
+      windows:
         pluginClass: OsIpAddressPlugin
 
   # To add assets to your plugin package, add an assets section, like this:

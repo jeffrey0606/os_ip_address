@@ -12,8 +12,8 @@ class OsIpAddress {
     return version;
   }
 
-  static Future<String> get ipAddress async {
+  static Future<List<String>> get ipAddress async {
     final String ipAddress = await _channel.invokeMethod('getIpAddress');
-    return ipAddress;
+    return ipAddress.split("-");
   }
 }
